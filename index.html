@@ -4,6 +4,7 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Maravilhas da Escandinávia 2027 · Oficina de Turismo</title>
+  <meta name="description" content="Estocolmo, Lillehammer, Loen, Bergen, Oslo, Cruzeiro Nordic e Copenhague. Viagem em grupo com acompanhamento desde o Brasil.">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
   <style>
     :root {
@@ -20,65 +21,61 @@
       --text-dark:   #1E2D3A;
       --text-light:  #5A6E7D;
     }
-
     * { margin:0; padding:0; box-sizing:border-box; }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Poppins', sans-serif; background: var(--light); color: var(--text-dark); }
+    html { scroll-behavior:smooth; }
+    body { font-family:'Poppins',sans-serif; background:var(--light); color:var(--text-dark); }
 
-    /* NAV */
+    /* ── NAV ── */
     nav {
-      position: fixed; top:0; left:0; right:0; z-index:999;
-      background: rgba(27,42,58,0.97);
-      backdrop-filter: blur(10px);
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 10px 32px;
-      box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+      position:fixed; top:0; left:0; right:0; z-index:999;
+      background:rgba(27,42,58,0.97); backdrop-filter:blur(10px);
+      display:flex; align-items:center; justify-content:space-between;
+      padding:10px 32px; box-shadow:0 2px 20px rgba(0,0,0,0.3);
     }
-    nav img { height: 52px; }
+    nav img { height:52px; }
     nav ul { list-style:none; display:flex; gap:20px; flex-wrap:wrap; }
-    nav ul li a { color:#ccc; text-decoration:none; font-size:.8rem; font-weight:500; transition:color .3s; }
+    nav ul li a { color:#ccc; text-decoration:none; font-size:.8rem; font-weight:500; letter-spacing:.5px; transition:color .3s; }
     nav ul li a:hover { color:var(--gold); }
 
-    /* HERO */
+    /* ── HERO ── */
     .hero {
-      position: relative; min-height: 100vh;
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
-      text-align: center; padding: 120px 20px 80px;
+      position:relative; min-height:100vh;
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      text-align:center; padding:120px 20px 80px;
       background:
-        linear-gradient(to bottom, rgba(27,42,58,.75) 0%, rgba(27,42,58,.4) 50%, rgba(27,42,58,.8) 100%),
-        url('https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=1600&q=80') center/cover no-repeat;
-      color: #fff; overflow: hidden;
+        linear-gradient(to bottom, rgba(27,42,58,.8) 0%, rgba(27,42,58,.45) 55%, rgba(27,42,58,.9) 100%),
+        url('Cruzeiro pelo Fiorde de Geiranger.JPEG') center/cover no-repeat;
+      color:#fff; overflow:hidden;
     }
     .hero::before {
       content:''; position:absolute; top:0;left:0;right:0;bottom:0;
       background:
         radial-gradient(ellipse at 20% 30%, rgba(74,127,165,.2) 0%, transparent 60%),
-        radial-gradient(ellipse at 80% 20%, rgba(61,107,94,.15) 0%, transparent 50%);
+        radial-gradient(ellipse at 80% 20%, rgba(61,107,94,.18) 0%, transparent 50%);
       pointer-events:none; z-index:0;
     }
     .hero > * { position:relative; z-index:1; }
-
-    .hero-logo { width:240px; margin-bottom:20px; filter: drop-shadow(0 4px 16px rgba(0,0,0,.7)); }
+    .hero-logo { width:240px; margin-bottom:22px; filter:drop-shadow(0 4px 16px rgba(0,0,0,.7)); }
     .hero-flag { font-size:2rem; margin-bottom:10px; letter-spacing:6px; }
     .hero h1 {
       font-family:'Playfair Display',serif;
-      font-size: clamp(2.8rem,7vw,5.5rem);
-      letter-spacing:2px; text-shadow:0 4px 20px rgba(0,0,0,.5); line-height:1.1;
+      font-size:clamp(2.8rem,7vw,5.4rem);
+      letter-spacing:2px; text-shadow:0 4px 20px rgba(0,0,0,.6); line-height:1.1;
     }
     .hero h1 span { color:var(--gold); }
     .hero .subtitle {
-      font-size: clamp(.95rem,2.5vw,1.4rem); font-weight:300;
+      font-size:clamp(.95rem,2.5vw,1.4rem); font-weight:300;
       margin-top:14px; color:var(--nordic-light); letter-spacing:4px; text-transform:uppercase;
     }
     .group-highlight {
-      background: rgba(255,255,255,.16); border:2px solid var(--gold);
+      background:rgba(255,255,255,.16); border:2px solid var(--gold);
       border-radius:50px; padding:12px 30px;
-      font-size: clamp(.9rem,2.2vw,1.15rem); font-weight:600;
+      font-size:clamp(.9rem,2.2vw,1.15rem); font-weight:600;
       margin-top:26px; backdrop-filter:blur(8px);
       text-transform:uppercase; letter-spacing:1px;
     }
     .experience-text {
-      font-size: clamp(.95rem,2vw,1.1rem); font-weight:400;
+      font-size:clamp(.95rem,2vw,1.1rem); font-weight:400;
       margin-top:12px; color:var(--nordic-light); font-style:italic;
     }
     .route-badges { display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin-top:30px; }
@@ -89,23 +86,23 @@
     }
     .dates-pill {
       background:var(--gold); color:var(--dark); border-radius:50px;
-      padding:10px 28px; font-size:.95rem; font-weight:700; margin-top:24px;
-      box-shadow:0 4px 16px rgba(201,168,76,.4);
+      padding:10px 28px; font-size:.95rem; font-weight:700;
+      margin-top:24px; box-shadow:0 4px 16px rgba(201,168,76,.4);
     }
     .scroll-hint { margin-top:44px; font-size:.8rem; opacity:.7; animation:bounce 2s infinite; }
     @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(10px)} }
 
-    /* SECTIONS */
+    /* ── SECTIONS ── */
     section { padding:80px 20px; }
     .section-title { text-align:center; margin-bottom:52px; }
     .section-title span { font-size:.76rem; color:var(--gold); font-weight:600; letter-spacing:3px; text-transform:uppercase; display:block; margin-bottom:8px; }
     .section-title h2 { font-family:'Playfair Display',serif; font-size:clamp(1.8rem,4vw,2.8rem); color:var(--dark); }
     .section-title .line { width:60px; height:3px; background:var(--gold); margin:14px auto 0; border-radius:2px; }
 
-    /* BANNER GRUPO */
+    /* ── BANNER GRUPO ── */
     .group-banner { background:linear-gradient(135deg,var(--dark) 0%,var(--nordic-blue) 100%); color:#fff; padding:60px 20px; }
     .group-banner-inner { max-width:1000px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:28px; text-align:center; }
-    .group-banner-text { grid-column:1/-1; text-align:center; }
+    .group-banner-text { grid-column:1/-1; }
     .group-banner-text h2 { font-family:'Playfair Display',serif; font-size:clamp(1.6rem,4vw,2.4rem); margin-bottom:12px; }
     .group-banner-text p { font-size:1rem; color:var(--nordic-light); line-height:1.8; max-width:700px; margin:0 auto; }
     .group-feature { background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.18); border-radius:16px; padding:24px 18px; }
@@ -113,7 +110,7 @@
     .group-feature h4 { font-size:.95rem; font-weight:600; margin-bottom:6px; color:var(--gold); }
     .group-feature p { font-size:.83rem; color:var(--nordic-light); line-height:1.6; }
 
-    /* INFO */
+    /* ── INFO ── */
     .essentials { background:var(--snow-white); }
     .info-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:20px; max-width:1100px; margin:0 auto; }
     .info-card { background:#fff; border-radius:18px; padding:28px 20px; text-align:center; box-shadow:0 4px 20px rgba(0,0,0,.07); border-top:4px solid var(--nordic-blue); transition:transform .3s; }
@@ -122,7 +119,7 @@
     .info-card h3 { color:var(--dark); margin-bottom:8px; font-size:.95rem; font-weight:600; }
     .info-card p { font-size:.82rem; color:var(--text-light); line-height:1.7; }
 
-    /* EXPERIÊNCIAS */
+    /* ── EXPERIÊNCIAS ── */
     .experiences-section { background:var(--fjord-light); }
     .experiences-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:26px; max-width:1200px; margin:0 auto; }
     .experience-card { background:#fff; border-radius:18px; overflow:hidden; box-shadow:0 8px 28px rgba(0,0,0,.1); display:flex; flex-direction:column; transition:transform .3s,box-shadow .3s; }
@@ -133,7 +130,7 @@
     .exp-content p { font-size:.86rem; color:var(--text-light); line-height:1.65; }
     .exp-tag { display:inline-block; background:var(--pastel-sky); color:var(--nordic-blue); font-size:.7rem; font-weight:600; padding:4px 12px; border-radius:20px; margin-top:10px; }
 
-    /* ROTEIRO */
+    /* ── ROTEIRO ── */
     .itinerary-bg { background:var(--pastel-sky); }
     .timeline { max-width:920px; margin:0 auto; position:relative; }
     .timeline::before { content:''; position:absolute; left:28px; top:0; bottom:0; width:3px; background:linear-gradient(to bottom,var(--gold),rgba(74,127,165,.2)); border-radius:2px; }
@@ -151,7 +148,7 @@
     .tag.gold { background:var(--gold); color:var(--dark); }
     .tag.light { background:var(--pastel-sky); color:var(--nordic-blue); }
 
-    /* SERVIÇOS */
+    /* ── SERVIÇOS ── */
     .services-section { background:var(--snow-white); }
     .services-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:30px; max-width:1060px; margin:0 auto; }
     .service-box { background:#fff; border-radius:18px; padding:32px 28px; box-shadow:0 4px 24px rgba(0,0,0,.08); }
@@ -162,7 +159,7 @@
     .service-box ul li { font-size:.88rem; color:var(--text-dark); padding:8px 0; border-bottom:1px dashed #eee; display:flex; gap:10px; line-height:1.6; }
     .service-box ul li:last-child { border-bottom:none; }
 
-    /* VOOS */
+    /* ── VOOS ── */
     .flights-section { background:var(--light); }
     .table-wrap { overflow-x:auto; max-width:1000px; margin:0 auto; border-radius:16px; box-shadow:0 4px 20px rgba(0,0,0,.08); }
     table { width:100%; border-collapse:collapse; background:#fff; min-width:580px; }
@@ -175,28 +172,29 @@
     .navio { background:var(--steel); }
     .volta { background:var(--gold); color:var(--dark); }
 
-    /* HOTÉIS */
+    /* ── HOTÉIS ── */
     .hotels-section { background:var(--fjord-light); }
-    .hotels-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:26px; max-width:1200px; margin:0 auto; }
+    .hotels-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:26px; max-width:1200px; margin:0 auto; }
     .hotel-card { background:#fff; border-radius:18px; overflow:hidden; box-shadow:0 6px 24px rgba(0,0,0,.09); border-top:4px solid var(--gold); display:flex; flex-direction:column; transition:transform .3s; }
     .hotel-card:hover { transform:translateY(-7px); }
-    .hotel-card img { width:100%; height:170px; object-fit:cover; }
+    .hotel-card img { width:100%; height:180px; object-fit:cover; }
     .hc-body { padding:18px 20px 22px; flex:1; }
     .city { font-size:.72rem; color:var(--gold); font-weight:700; text-transform:uppercase; letter-spacing:1.5px; margin-bottom:6px; }
-    .hotel-card h3 { font-family:'Playfair Display',serif; font-size:1.05rem; color:var(--dark); margin-bottom:8px; }
+    .hotel-card h3 { font-family:'Playfair Display',serif; font-size:1.05rem; color:var(--dark); margin-bottom:8px; line-height:1.3; }
     .nights { display:inline-block; background:var(--snow-white); border:1px solid var(--gold); color:var(--dark); font-size:.74rem; font-weight:600; padding:4px 12px; border-radius:20px; margin-bottom:8px; }
     .hotel-card p { font-size:.8rem; color:var(--text-light); line-height:1.6; }
 
-    /* VALORES */
+    /* ── VALORES ── */
     .pricing-section { background:var(--snow-white); text-align:center; }
-    .price-box { max-width:740px; margin:0 auto; background:#fff; border-radius:22px; padding:50px 40px; box-shadow:0 10px 40px rgba(0,0,0,.1); border-top:6px solid var(--gold); }
-    .price-box h3 { font-family:'Playfair Display',serif; font-size:clamp(1.4rem,4vw,2.1rem); margin-bottom:10px; }
+    .price-box { max-width:740px; margin:0 auto; background:#fff; border-radius:22px; padding:50px 40px; box-shadow:0 10px 40px rgba(0,0,0,.1); border-top:6px solid var(--gold); position:relative; overflow:hidden; }
+    .price-box::before { content:'❄'; position:absolute; top:-10px; right:20px; font-size:8rem; opacity:.04; pointer-events:none; }
+    .price-box h3 { font-family:'Playfair Display',serif; font-size:clamp(1.4rem,4vw,2.1rem); margin-bottom:10px; color:var(--dark); }
     .price-value { font-family:'Playfair Display',serif; font-size:clamp(2rem,6vw,3.4rem); color:var(--gold); font-weight:800; display:block; margin:14px 0 6px; }
     .price-per { font-size:.95rem; color:var(--text-light); margin-bottom:20px; }
     .price-sgl { display:inline-block; background:var(--pastel-sky); border:1px solid var(--nordic-blue); color:var(--nordic-blue); font-size:.92rem; font-weight:600; padding:10px 28px; border-radius:50px; margin-bottom:16px; }
     .price-note { font-size:.83rem; color:var(--text-light); font-style:italic; margin-top:16px; line-height:1.7; }
 
-    /* CTA */
+    /* ── CTA ── */
     .cta-section { background:linear-gradient(135deg,var(--dark) 0%,var(--nordic-blue) 100%); color:#fff; text-align:center; padding:90px 20px; }
     .cta-section h2 { font-family:'Playfair Display',serif; font-size:clamp(2rem,5vw,3.4rem); margin-bottom:14px; }
     .cta-section p { font-size:clamp(1rem,2.5vw,1.2rem); margin-bottom:10px; font-weight:300; color:var(--nordic-light); }
@@ -208,27 +206,29 @@
     .cta-btn.email { background:var(--gold); color:var(--dark); }
     .cta-btn.email:hover { transform:translateY(-3px); box-shadow:0 8px 24px rgba(201,168,76,.4); }
     .cta-btn.insta { background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); color:#fff; }
-    .cta-btn.insta:hover { transform:translateY(-3px); box-shadow:0 8px 24px rgba(220,39,67,.35); }
+    .cta-btn.insta:hover { transform:translateY(-3px); }
 
-    /* FOOTER */
+    /* ── FOOTER ── */
     footer { background:#101722; color:#999; text-align:center; padding:40px 20px; font-size:.83rem; }
     footer img { height:52px; margin-bottom:14px; filter:drop-shadow(0 3px 10px rgba(0,0,0,.7)); }
     footer a { color:#ddd; text-decoration:none; }
     footer a:hover { color:var(--gold); }
 
+    /* ── RESPONSIVO ── */
     @media(max-width:768px) {
       nav ul { display:none; }
       nav img { height:46px; }
       .timeline::before { left:20px; }
-      .day { gap:18px; }
+      .day { gap:16px; }
       .day-number { width:46px; height:46px; font-size:.72rem; }
-      .price-box { padding:32px 20px; }
+      .price-box { padding:32px 18px; }
+      .hero-logo { width:180px; }
     }
   </style>
 </head>
 <body>
 
-<!-- NAV -->
+<!-- ══════════ NAV ══════════ -->
 <nav>
   <img src="Logo fundo transparente.png" alt="Oficina de Turismo"/>
   <ul>
@@ -243,7 +243,7 @@
   </ul>
 </nav>
 
-<!-- HERO -->
+<!-- ══════════ HERO ══════════ -->
 <section class="hero" id="sobre">
   <img src="Logo fundo transparente.png" alt="Oficina de Turismo" class="hero-logo"/>
   <div class="hero-flag">🇸🇪 🇳🇴 🇩🇰</div>
@@ -265,7 +265,7 @@
   <p class="scroll-hint">Descubra a magia do Norte ↓</p>
 </section>
 
-<!-- BANNER GRUPO -->
+<!-- ══════════ BANNER GRUPO ══════════ -->
 <section class="group-banner">
   <div class="group-banner-inner">
     <div class="group-banner-text">
@@ -295,7 +295,7 @@
   </div>
 </section>
 
-<!-- INFO ESSENCIAIS -->
+<!-- ══════════ INFO ESSENCIAIS ══════════ -->
 <section class="essentials" id="info">
   <div class="section-title">
     <span>Detalhes da viagem</span>
@@ -336,7 +336,7 @@
   </div>
 </section>
 
-<!-- EXPERIÊNCIAS -->
+<!-- ══════════ EXPERIÊNCIAS ══════════ -->
 <section class="experiences-section" id="experiencias">
   <div class="section-title">
     <span>Momentos que você jamais vai esquecer</span>
@@ -346,7 +346,7 @@
   <div class="experiences-grid">
 
     <div class="experience-card">
-      <img src="https://images.unsplash.com/photo-1508193638397-1c4234db14d8?w=600&q=80" alt="Gamla Stan Estocolmo"/>
+      <img src="Gamla Stan.jpg" alt="Gamla Stan – Estocolmo"/>
       <div class="exp-content">
         <h3>Gamla Stan – A Cidade Antiga de Estocolmo</h3>
         <p>Ruelas medievais, casas coloridas e o Palácio Real na ilha mais charmosa da capital sueca.</p>
@@ -355,7 +355,7 @@
     </div>
 
     <div class="experience-card">
-      <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=600&q=80" alt="Lillehammer"/>
+      <img src="Lillehammer.jpeg" alt="Lillehammer"/>
       <div class="exp-content">
         <h3>Lillehammer – Cidade Olímpica de Inverno</h3>
         <p>Sinta o clima dos Jogos Olímpicos de Inverno de 1994 em um dos destinos mais icônicos da Noruega.</p>
@@ -364,16 +364,16 @@
     </div>
 
     <div class="experience-card">
-      <img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=600&q=80" alt="Fiorde de Geiranger"/>
+      <img src="Cruzeiro pelo Fiorde de Geiranger.JPEG" alt="Fiorde de Geiranger"/>
       <div class="exp-content">
         <h3>Cruzeiro pelo Fiorde de Geiranger</h3>
-        <p>Navegue pelo fiorde mais famoso do mundo, Patrimônio UNESCO, com as majestosas cachoeiras das Sete Irmãs.</p>
+        <p>Navegue pelo fiorde mais famoso do mundo, Patrimônio UNESCO, com as cachoeiras das Sete Irmãs.</p>
         <span class="exp-tag">🌊 Geiranger</span>
       </div>
     </div>
 
     <div class="experience-card">
-      <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80" alt="Sognefjord"/>
+      <img src="Travessia do Sognefjord de Ferry.jpg" alt="Sognefjord"/>
       <div class="exp-content">
         <h3>Travessia do Sognefjord de Ferry</h3>
         <p>Uma viagem de ferry pelo fiorde mais longo e profundo da Noruega, entre montanhas imponentes.</p>
@@ -382,7 +382,7 @@
     </div>
 
     <div class="experience-card">
-      <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=600&q=80" alt="Bergen Funicular"/>
+      <img src="Funicular de Bergen.jpg" alt="Funicular de Bergen"/>
       <div class="exp-content">
         <h3>Funicular de Bergen e Vista 360°</h3>
         <p>Suba ao Monte Fløyen no famoso funicular e desfrute de uma vista espetacular de Bergen e dos fiordes.</p>
@@ -391,7 +391,7 @@
     </div>
 
     <div class="experience-card">
-      <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&q=80" alt="Bryggen Bergen"/>
+      <img src="Bryggen e o Mercado de Peixe.jpeg" alt="Bryggen e Mercado de Peixe"/>
       <div class="exp-content">
         <h3>Bryggen e o Mercado de Peixe</h3>
         <p>O icônico cais hanseático de Bergen, Patrimônio UNESCO, e os sabores do tradicional mercado de peixe.</p>
@@ -400,7 +400,7 @@
     </div>
 
     <div class="experience-card">
-      <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=600&q=80" alt="Parque Hardanger"/>
+      <img src="Travessia do Parque Nacional de Hardanger.jpg" alt="Parque Nacional de Hardanger"/>
       <div class="exp-content">
         <h3>Travessia do Parque Nacional de Hardanger</h3>
         <p>Uma das estradas panorâmicas mais bonitas da Europa, entre fiordes, florestas e o planalto Hardangervidda.</p>
@@ -409,16 +409,16 @@
     </div>
 
     <div class="experience-card">
-      <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600&q=80" alt="Parque Vigeland Oslo"/>
+      <img src="Parque Vigeland e o Monólito de Oslo.jpg" alt="Parque Vigeland Oslo"/>
       <div class="exp-content">
         <h3>Parque Vigeland e o Monólito de Oslo</h3>
-        <p>Mais de 200 esculturas de bronze e granito e o imponente monólito com 212 corpos entrelaçados.</p>
+        <p>Mais de 200 esculturas e o imponente monólito com 212 corpos entrelaçados representando o ciclo da vida.</p>
         <span class="exp-tag">🏛️ Oslo</span>
       </div>
     </div>
 
     <div class="experience-card">
-      <img src="https://images.unsplash.com/photo-1548115184-bc6544d06a58?w=600&q=80" alt="Cruzeiro Nordic"/>
+      <img src="Cruzeiro Nordic Oslo Copenhague.jpg" alt="Cruzeiro Nordic"/>
       <div class="exp-content">
         <h3>Cruzeiro Nordic Oslo → Copenhague</h3>
         <p>Noite a bordo com cabine externa, jantar buffet e navegação pelo Mar do Norte rumo à Dinamarca.</p>
@@ -427,10 +427,10 @@
     </div>
 
     <div class="experience-card">
-      <img src="https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?w=600&q=80" alt="Nyhavn Copenhague"/>
+      <img src="COPENHAGUE HOTEL RADISSON BLU SCANDINAVIA.jpg" alt="Copenhague"/>
       <div class="exp-content">
         <h3>Copenhague e a Pequena Sereia</h3>
-        <p>O porto colorido de Nyhavn, o Palácio de Christiansborg e o símbolo eterno da cidade — a Pequena Sereia.</p>
+        <p>O porto colorido de Nyhavn, o Palácio de Christiansborg e o símbolo eterno — a Pequena Sereia.</p>
         <span class="exp-tag">🧜 Copenhague</span>
       </div>
     </div>
@@ -438,7 +438,7 @@
   </div>
 </section>
 
-<!-- ROTEIRO -->
+<!-- ══════════ ROTEIRO ══════════ -->
 <section class="itinerary-bg" id="roteiro">
   <div class="section-title">
     <span>Sua jornada dia a dia</span>
@@ -452,7 +452,7 @@
       <div class="day-content">
         <div class="day-date">27 Mai · Quinta-feira</div>
         <h3>Guarulhos → Estocolmo</h3>
-        <p>Início de nossa grande aventura! Encontro no Aeroporto Internacional de Guarulhos (GRU) para embarque em voo com destino a Estocolmo, Suécia.</p>
+        <p>Início da nossa grande aventura! Encontro no Aeroporto Internacional de Guarulhos (GRU) para embarque em voo com destino a Estocolmo, Suécia.</p>
         <div class="tags">
           <span class="tag blue">✈️ Voo Internacional</span>
           <span class="tag gold">🇧🇷 Saída do Brasil</span>
@@ -478,7 +478,7 @@
       <div class="day-content">
         <div class="day-date">29 Mai · Sábado</div>
         <h3>Estocolmo – A Rainha das Águas</h3>
-        <p>Café da manhã e tour completo pela capital sueca, distribuída em 14 ilhas. Destaque para Gamla Stan com seus edifícios medievais, Palácio Real e o Templo do Buda de Esmeralda.</p>
+        <p>Café da manhã e tour completo pela capital sueca, distribuída em 14 ilhas. Destaque para Gamla Stan com seus edifícios medievais e o Palácio Real.</p>
         <div class="tags">
           <span class="tag green">🏙️ City Tour</span>
           <span class="tag blue">🏰 Gamla Stan</span>
@@ -524,6 +524,7 @@
         <div class="tags">
           <span class="tag blue">⛴️ Travessia Sognefjord</span>
           <span class="tag green">🌄 Paisagens Épicas</span>
+          <span class="tag gold">☕ Café da manhã incluso</span>
         </div>
       </div>
     </div>
@@ -612,7 +613,7 @@
   </div>
 </section>
 
-<!-- SERVIÇOS -->
+<!-- ══════════ SERVIÇOS ══════════ -->
 <section class="services-section" id="servicos">
   <div class="section-title">
     <span>Transparência total</span>
@@ -652,7 +653,7 @@
   </div>
 </section>
 
-<!-- VOOS -->
+<!-- ══════════ VOOS ══════════ -->
 <section class="flights-section" id="voos">
   <div class="section-title">
     <span>Sua jornada aérea</span>
@@ -701,7 +702,7 @@
   </div>
 </section>
 
-<!-- HOSPEDAGEM -->
+<!-- ══════════ HOSPEDAGEM ══════════ -->
 <section class="hotels-section" id="hospedagem">
   <div class="section-title">
     <span>Conforto em cada destino</span>
@@ -711,57 +712,57 @@
   <div class="hotels-grid">
 
     <div class="hotel-card">
-      <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=600&q=80" alt="Hotel Estocolmo"/>
+      <img src="ESTOCOLMO HOTEL CLARION SIGN.jpg" alt="Hotel Clarion Sign – Estocolmo"/>
       <div class="hc-body">
         <p class="city">🇸🇪 Estocolmo</p>
-        <h3>Hotel Categoria Superior</h3>
+        <h3>Hotel Clarion Sign</h3>
         <span class="nights">2 noites</span>
         <p>Ou similar · Apartamento standard · Café da manhã incluso · Localização central.</p>
       </div>
     </div>
 
     <div class="hotel-card">
-      <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=80" alt="Hotel Lillehammer"/>
+      <img src="LILLEHAMMER HOME HOTEL HAMMER.jpg" alt="Home Hotel Hammer – Lillehammer"/>
       <div class="hc-body">
         <p class="city">🇳🇴 Lillehammer</p>
-        <h3>Hotel Categoria Superior</h3>
+        <h3>Home Hotel Hammer</h3>
         <span class="nights">1 noite</span>
         <p>Ou similar · Ambiente típico alpino · Café da manhã incluso.</p>
       </div>
     </div>
 
     <div class="hotel-card">
-      <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&q=80" alt="Hotel Loen"/>
+      <img src="LOEN HOTEL ALEXANDRA.jpeg" alt="Hotel Alexandra – Loen"/>
       <div class="hc-body">
         <p class="city">🇳🇴 Loen</p>
-        <h3>Hotel Categoria Superior</h3>
+        <h3>Hotel Alexandra</h3>
         <span class="nights">1 noite</span>
         <p>Ou similar · Vista para os fiordes · Café da manhã e jantar buffet inclusos.</p>
       </div>
     </div>
 
     <div class="hotel-card">
-      <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=600&q=80" alt="Hotel Bergen"/>
+      <img src="Funicular de Bergen.jpg" alt="Hotel em Bergen"/>
       <div class="hc-body">
         <p class="city">🇳🇴 Bergen</p>
         <h3>Hotel Categoria Superior</h3>
         <span class="nights">2 noites</span>
-        <p>Ou similar · Próximo ao Bryggen · Café da manhã incluso.</p>
+        <p>Ou similar · Próximo ao Bryggen e ao funicular · Café da manhã incluso.</p>
       </div>
     </div>
 
     <div class="hotel-card">
-      <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=600&q=80" alt="Hotel Oslo"/>
+      <img src="OSLO HOTEL RADISSON SCANDINAVIA.JPEG" alt="Hotel Radisson Blu Scandinavia – Oslo"/>
       <div class="hc-body">
         <p class="city">🇳🇴 Oslo</p>
-        <h3>Hotel Categoria Superior</h3>
+        <h3>Hotel Radisson Blu Scandinavia</h3>
         <span class="nights">1 noite</span>
         <p>Ou similar · Fácil acesso ao centro · Café da manhã incluso.</p>
       </div>
     </div>
 
     <div class="hotel-card">
-      <img src="https://images.unsplash.com/photo-1548115184-bc6544d06a58?w=600&q=80" alt="Cruzeiro Nordic"/>
+      <img src="Cruzeiro Nordic Oslo Copenhague.jpg" alt="Cruzeiro Nordic"/>
       <div class="hc-body">
         <p class="city">🚢 Cruzeiro Nordic</p>
         <h3>Cabine Externa com Janela</h3>
@@ -771,10 +772,10 @@
     </div>
 
     <div class="hotel-card">
-      <img src="https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?w=600&q=80" alt="Hotel Copenhague"/>
+      <img src="COPENHAGUE HOTEL RADISSON BLU SCANDINAVIA.jpg" alt="Hotel Radisson Blu Scandinavia – Copenhague"/>
       <div class="hc-body">
         <p class="city">🇩🇰 Copenhague</p>
-        <h3>Hotel Categoria Superior</h3>
+        <h3>Hotel Radisson Blu Scandinavia</h3>
         <span class="nights">2 noites</span>
         <p>Ou similar · Localização central · Café da manhã incluso.</p>
       </div>
@@ -783,7 +784,7 @@
   </div>
 </section>
 
-<!-- VALORES -->
+<!-- ══════════ VALORES ══════════ -->
 <section class="pricing-section" id="valores">
   <div class="section-title">
     <span>Investimento na sua experiência</span>
@@ -803,14 +804,14 @@
   </div>
 </section>
 
-<!-- CTA -->
+<!-- ══════════ CTA ══════════ -->
 <section class="cta-section" id="contato">
   <h2>Garanta sua vaga na Escandinávia!</h2>
   <p>Vagas limitadas · Saída <strong>27 de Maio de 2027</strong></p>
   <span class="highlight">✨ Oficina de Turismo · Realizando sonhos há mais de 30 anos</span>
   <div class="cta-buttons">
     <a class="cta-btn whatsapp"
-       href="https://wa.me/5535988622943?text=Ol%C3%A1%21+Tenho+interesse+na+viagem+Maravilhas+da+Escandin%C3%A1via+2027+%F0%9F%87%B3%F0%9F%87%B4"
+       href="https://wa.me/5535988622943?text=Ol%C3%A1%21+Tenho+interesse+na+viagem+Maravilhas+da+Escandin%C3%A1via+2027"
        target="_blank">
       💬 WhatsApp (35) 98862-2943
     </a>
@@ -827,7 +828,7 @@
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ══════════ FOOTER ══════════ -->
 <footer>
   <img src="Logo fundo transparente.png" alt="Oficina de Turismo"/>
   <p>
